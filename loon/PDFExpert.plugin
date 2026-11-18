@@ -1,0 +1,10 @@
+#!name=PDF Expert 测试
+#!desc=Yu9191 PDFexpert.js 的 Loon 适配，脚本含来源不明的内置收据和令牌；效果未验证
+#!author=原脚本作者见上游说明；Loon 格式适配
+#!homepage=https://github.com/Yu9191/Rewrite/blob/main/PDFexpert.js
+
+[Script]
+http-request ^https:\/\/license\.pdfexpert\.com\/api\/2\.0\/pdfexpert6\/subscription\/refresh script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/PDFexpert.js, requires-body=true, timeout=60, tag=PDFExpert
+
+[MITM]
+hostname = license.pdfexpert.com
