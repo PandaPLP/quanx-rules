@@ -7,6 +7,9 @@
 - [`apple-services.list`](apple-services.list)：Quantumult X 的 Apple 相关服务分流规则，规则将列出的域名交给代理策略；是否正在使用需要在 Quantumult X 中确认。
 - [`loon/AppleFlow-PROXY-fixed.plugin`](loon/AppleFlow-PROXY-fixed.plugin)：Loon 的 AppleFlow 兼容修正版，将插件中的 PROXY 绑定到 Loon 中选择的策略。包含 Siri 直连和 Apple Intelligence 等服务的分流规则。基于 [AppleFlow](https://github.com/Kianuni/AppleFlow)，原作者 Kianuni；许可说明保留在插件中。
 
+
+- [AppleFlow 中文说明](loon/README.md)：查看插件分组、策略绑定和安全检查方法。
+
 ## 使用与维护
 
 导入 Loon 插件时，将插件的 PROXY 绑定到需要的策略组。配置中的规则不等于实际命中结果；使用时请在 Loon 的请求记录中核对。两份文件分别针对不同客户端，不保证互相等价。
