@@ -1,0 +1,10 @@
+#!name=看理想 (Loon)
+#!desc=看理想响应改写；脚本来自 Yu9191，实际效果未验证
+#!author=baby; Loon wrapper
+#!homepage=https://github.com/Yu9191/Rewrite/blob/main/klx.sgmodule
+
+[Script]
+http-response ^https?:\/\/api\.vistopia\.com\.cn\/api\/v2\/(reader\/(section-detail|detail)|user\/(profile|home)|vip\/buy-list|services\/play-token) script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/kanlixiang.js, requires-body=true, timeout=60, tag=看理想
+
+[MITM]
+hostname = api.vistopia.com.cn
