@@ -1,0 +1,10 @@
+#!name = 东方财富 · 广告域名拦截
+#!desc = 仅拦截两个东方财富广告域名，不启用 MITM、不加载脚本。横幅和弹窗效果请实测。
+#!homepage = https://github.com/PandaPLP/quanx-rules
+#!system = ios, ipados
+#!version = 1.0.0
+
+[Rule]
+# 广告域名参考：https://github.com/haixinn/loon/blob/main/dfcf.plugin
+DOMAIN,emdcadvertise.eastmoney.com,REJECT
+DOMAIN,emdcadvertisepj.eastmoney.com,REJECT
