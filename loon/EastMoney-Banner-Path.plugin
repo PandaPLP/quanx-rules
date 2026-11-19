@@ -1,0 +1,12 @@
+#!name = 东方财富 · 横幅路径试验
+#!desc = 仅处理广告图片目录的 GET 请求；需对一个 CDN 主机解密。横幅来源尚未确认。
+#!homepage = https://github.com/PandaPLP/quanx-rules
+#!system = ios, ipados
+#!loon_version = 3.5.1(978)
+
+[Rewrite]
+# 路径线索：https://github.com/haixinn/loon/blob/main/dfcf.plugin
+request if ${request.method} == "GET" && ${url} ~= /^https:\/\/swdlcdn\.eastmoney\.com\/app\/adimg\// then reject_img(200)
+
+[Mitm]
+hostname = swdlcdn.eastmoney.com
