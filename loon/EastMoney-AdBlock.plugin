@@ -1,4 +1,5 @@
 #!name = 东方财富 · 广告域名拦截
+#!icon = https://raw.githubusercontent.com/PandaPLP/quanx-rules/main/loon/icons/eastmoney-block.png
 #!desc = 仅拦截两个东方财富广告域名，不启用 MITM、不加载脚本。横幅和弹窗效果请实测。
 #!homepage = https://github.com/PandaPLP/quanx-rules
 #!system = ios, ipados

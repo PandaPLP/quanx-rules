@@ -1,4 +1,5 @@
 #!name = 高德地图｜开屏与首页精简
+#!icon = https://raw.githubusercontent.com/PandaPLP/quanx-rules/main/loon/icons/amap-home.png
 #!desc = 拦开屏和首页 AI 推荐模块，不过滤输入联想，也不改导航、打车或搜索结果。请勿与其他高德净化插件同时开启。
 #!author = PandaPLP
 

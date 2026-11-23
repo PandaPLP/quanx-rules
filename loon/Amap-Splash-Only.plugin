@@ -1,4 +1,5 @@
 #!name = 高德地图｜仅拦开屏 · 联想测试
+#!icon = https://raw.githubusercontent.com/PandaPLP/quanx-rules/main/loon/icons/amap-splash.png
 #!desc = 仅拦两条已知开屏广告路径，不处理搜索、联想、打车或导航接口。请停用原高德去广告插件后单独测试。
 #!author = PandaPLP
 

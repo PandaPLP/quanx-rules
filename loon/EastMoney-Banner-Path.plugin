@@ -1,4 +1,5 @@
 #!name = 东方财富 · 横幅路径试验
+#!icon = https://raw.githubusercontent.com/PandaPLP/quanx-rules/main/loon/icons/eastmoney-banner.png
 #!desc = 仅处理广告图片目录的 GET 请求；需对一个 CDN 主机解密。横幅来源尚未确认。
 #!homepage = https://github.com/PandaPLP/quanx-rules
 #!system = ios, ipados

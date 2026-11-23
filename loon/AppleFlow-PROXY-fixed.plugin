@@ -1,4 +1,5 @@
 #!name = AppleFlow · Apple 智能与中文 Siri 分流
+#!icon = https://raw.githubusercontent.com/PandaPLP/quanx-rules/main/loon/icons/appleflow.png
 #!desc = 零 MitM 极简分流：保障中文 Siri 与普通话来电筛选真实 IP 直连，将 Apple Intelligence PCC 与 ChatGPT/视觉智能置顶分流至美区策略组。
 #!openUrl = https://kianuni.github.io/AppleFlow/
 #!author = Kianuni[https://github.com/Kianuni/AppleFlow]
