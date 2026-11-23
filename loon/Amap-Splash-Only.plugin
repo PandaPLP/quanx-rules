@@ -1,0 +1,11 @@
+#!name = 高德地图｜仅拦开屏 · 联想测试
+#!desc = 仅拦两条已知开屏广告路径，不处理搜索、联想、打车或导航接口。请停用原高德去广告插件后单独测试。
+#!author = PandaPLP
+
+[Rewrite]
+# 开屏广告。匹配精确路径，允许查询参数。
+^https:\/\/m5\.amap\.com\/ws\/valueadded\/alimama\/splash_screen(?:\?|$) reject-dict
+^https:\/\/amap-aos-info-nogw\.amap\.com\/ws\/aos\/alimama\/splash_screen_rt(?:\?|$) reject-dict
+
+[MitM]
+hostname = m5.amap.com, amap-aos-info-nogw.amap.com
