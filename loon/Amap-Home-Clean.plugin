@@ -1,0 +1,15 @@
+#!name = 高德地图｜开屏与首页精简
+#!desc = 拦开屏和首页 AI 推荐模块，不过滤输入联想，也不改导航、打车或搜索结果。请勿与其他高德净化插件同时开启。
+#!author = PandaPLP
+
+[Rewrite]
+# 开屏广告。匹配精确路径，允许查询参数。
+^https:\/\/m5\.amap\.com\/ws\/valueadded\/alimama\/splash_screen(?:\?|$) reject-dict
+^https:\/\/amap-aos-info-nogw\.amap\.com\/ws\/aos\/alimama\/splash_screen_rt(?:\?|$) reject-dict
+
+# 首页 AI 模块：只拦下列两个精确路径，不拦整个 ai_rec 分类。
+^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/main-page-aiqs(?:\?|$) reject-dict
+^https:\/\/ai\.amap\.com\/v1\/ai_rec\/home_qs(?:\?|$) reject-dict
+
+[MitM]
+hostname = m5.amap.com, amap-aos-info-nogw.amap.com, ai.amap.com
