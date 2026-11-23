@@ -1,0 +1,19 @@
+#!name = 高德地图｜精简 · 我的页测试
+#!desc = 保留开屏与首页精简；仅尝试隐藏我的页中明确标为猜你喜欢的卡片，不改输入联想。请勿与其他高德净化插件同时开启。
+#!author = PandaPLP
+#!icon = https://raw.githubusercontent.com/PandaPLP/quanx-rules/f0762764233647512891bda2086fd6778b38a435/loon/icons/amap-home.png
+
+[Rewrite]
+# 开屏广告。匹配精确路径，允许查询参数。
+^https:\/\/m5\.amap\.com\/ws\/valueadded\/alimama\/splash_screen(?:\?|$) reject-dict
+^https:\/\/amap-aos-info-nogw\.amap\.com\/ws\/aos\/alimama\/splash_screen_rt(?:\?|$) reject-dict
+
+# 首页 AI 模块：只拦下列两个精确路径，不拦整个 ai_rec 分类。
+^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/main-page-aiqs(?:\?|$) reject-dict
+^https:\/\/ai\.amap\.com\/v1\/ai_rec\/home_qs(?:\?|$) reject-dict
+
+# 只检查个人页卡片的标题，结构不符时保持原样。
+^https:\/\/m5\.amap\.com\/ws\/shield\/dsp\/profile\/index\/nodefaas(?:v3)?(?:\?|$) response-body-json-jq 'def target: if type == "object" then any((.title?, .name?, (try .header.title catch null), (try .content.title catch null), (try .content.name catch null), (try .content.header.title catch null), (try .content.data.title catch null)); . == "猜你喜欢") else false end; if (try (.data.cardList | type) catch null) == "array" then .data.cardList |= map(select(target | not)) else . end'
+
+[MitM]
+hostname = m5.amap.com, amap-aos-info-nogw.amap.com, ai.amap.com
